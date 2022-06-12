@@ -8,7 +8,7 @@ console.log(v.make)
 // When viewing mercurySedan.js, vehicleModule must be imported.
 
 // When viewing mercurySedan.js, the file must include a Car class that extends vehicleModule.
-class mercury extends VehicleModule{
+class Car extends VehicleModule{
         constructor(make, model, year, color, mileage){
             // When viewing mercurySedan.js, the Car class must include a constructor that implements the super keyword.
             super(maximumPassengers, passenger, numberOfWheels, maximumSpeed, fuel, scheduleService);
@@ -33,7 +33,7 @@ class mercury extends VehicleModule{
             start == true;
         } else {
             start == false;
-            console.log (this.mercury + " needs fuel.")
+            console.log (this.make + " needs fuel.")
         }
     }
     scheduleService(mileage){
