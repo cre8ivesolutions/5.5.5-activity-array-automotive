@@ -2,23 +2,20 @@
 const VehicleModule = require("./vehicleBaseClass")
 
 //this shows how to call from this module...
-let v = new VehicleModule.Vehicle("Mecury", "Sedan", "1965", "color", "mileage");
-console.log(v.make)
 
 // When viewing mercurySedan.js, vehicleModule must be imported.
 
 // When viewing mercurySedan.js, the file must include a Car class that extends vehicleModule.
-class Car extends VehicleModule{
-        constructor(make, model, year, color, mileage){
-            // When viewing mercurySedan.js, the Car class must include a constructor that implements the super keyword.
-            super(maximumPassengers, passenger, numberOfWheels, maximumSpeed, fuel, scheduleService);
-            this.maximumPassengers = 5;
-            this.passenger = 0;
-            this.numberOfWheels = 4;
-            this.maximumSpeed = 160;
-            this.fuel = 10;
-            this.scheduleService = false;          
-        }
+class Car extends VehicleModule.Vehicle{
+    constructor(make, model, year, color, mileage){
+        // When viewing mercurySedan.js, the Car class must include a constructor that implements the super keyword.
+        super(maximumPassengers, passenger, numberOfWheels, maximumSpeed, fuel, scheduleService);
+        this.maximumPassengers = 5;
+        this.passenger = 0;
+        this.numberOfWheels = 4;
+        this.maximumSpeed = 160;
+        this.fuel = 10;
+        this.scheduleService = false;          
     }
     // When viewing mercurySedan.js, the Car class must include all properties and methods defined in the activity.
     loadPassenger(num){
@@ -42,9 +39,13 @@ class Car extends VehicleModule{
         } else {
             this.scheduleService = false;
         }
-            // // 
-            // PRACTICE CODE 
-            // let passenger = maximumPassengers
+    }
+}
+    let v = new Car("Mecury", "Sedan", "1965", "color", "mileage");
+    console.log(v.make)
+    // // 
+    // PRACTICE CODE 
+    // let passenger = maximumPassengers
             // let speed = maximumSpeed
             // let mileage = [fuel +' '+ "mpg"]
             // let started = scheduleService 
@@ -56,4 +57,3 @@ class Car extends VehicleModule{
             // maximumSpeed 160
             // fuel 10
             // scheduleService falsE
-        }
